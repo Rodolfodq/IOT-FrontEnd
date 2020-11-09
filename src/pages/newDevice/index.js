@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
-//import imgLogo from "../../assets/ilustrador-da-adobe.svg";
 import imgLogo from "../../assets/lamp.png";
 import api from "../../services/api";
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { FiPower, FiTrash2 } from "react-icons/fi";
+import { FiPower } from "react-icons/fi";
 
 import imgLogo from "../../assets/lamp.png";
 
@@ -12,6 +12,7 @@ export default function MainMenu() {
   const email = localStorage.getItem("email");
   const jwtToken = localStorage.getItem("jwt");
   const history = useHistory();
+  
 
   useEffect(() => {
     api
@@ -29,6 +30,11 @@ export default function MainMenu() {
     localStorage.clear();
     history.push("/");
   }
+
+  function handleGetDeviceId(id){
+    localStorage.setItem("deviceId", id);
+  }
+
   return (
     <div className="container-menu">
       <header>
@@ -62,9 +68,14 @@ export default function MainMenu() {
             <strong>Localização:</strong>
             <p>{device.deviceLocation}</p>
 
-            <button type="button">
-              <FiTrash2 size={20} color="#a8a8b3" />
-            </button>
+            <button className="button">Remover Device</button>
+            
+            <Link to="/newSensor">
+              <button className="button" onClick={() => handleGetDeviceId(device.deviceId)}>Adicionar Sensor</button>
+            </Link>
+            <Link to="/listSensor">
+              <button className="button" onClick={() => handleGetDeviceId(device.deviceId)}>Lista de Sensores</button>
+            </Link>
           </li>
         ))}
       </ul>

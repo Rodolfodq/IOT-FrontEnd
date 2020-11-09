@@ -12,8 +12,7 @@
   .container-device section.form {
     width: 100%;
     max-width: 300px;
-    margin-right: 0px;
-    /*border: solid 1px;*/
+    margin-right: 0px;    
   }
   
   .container-device section.form form {
@@ -53,10 +52,7 @@
     opacity: 0.5;
     margin: 10px;
   }
-  
-  
-  
-  
+    
   .container-device .form h1 {
     color: white;
     margin-top: 50px;

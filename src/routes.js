@@ -6,6 +6,7 @@ import Register from "./pages/Register";
 import NewDevice from "./pages/newDevice";
 import NewSensor from "./pages/newSensor";
 import MainMenu from "./pages/main";
+import ListSensor from "./pages/listSensor";
 
 export default function Routes() {
   return (
@@ -16,6 +17,7 @@ export default function Routes() {
         <Route path="/newDevice" exact component={NewDevice} />
         <Route path="/newSensor" exact component={NewSensor} />
         <Route path="/main" component={MainMenu} />
+        <Route path="/listSensor" component={ListSensor} />
       </Switch>
     </BrowserRouter>
   );

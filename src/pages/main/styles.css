@@ -73,19 +73,6 @@
   position: relative;
 }
 
-.container-menu ul li button svg {
-  position: absolute;
-  background-color: #fff;
-  right: 24px;
-  top: 24px;
-  border: 5px;
-  transition: 0.2s;
-}
-
-.container-menu ul li button:hover {
-  opacity: 0.8;
-}
-
 .container-menu ul li strong {
   display: block;
   margin-bottom: 16px;
