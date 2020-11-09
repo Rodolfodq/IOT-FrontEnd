@@ -1,0 +1,106 @@
+.container-menu {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.container-menu header {
+  display: flex;
+  align-items: center;
+}
+
+.container-menu header span {
+  font-size: 20px;
+  margin-left: 24px;
+  color: white;
+}
+
+.container-menu header img {
+  height: 90px;
+}
+
+.container-menu header .card-button {
+  width: 200px;
+  height: 42px;
+  margin-top: 0;
+  background-color: #fdc500;
+  align-items: stretch;
+  color: black;
+}
+
+.container-menu header button {
+  height: 42px;
+  width: 42px;
+  background: #fdc500;
+  transition: 0.2s;  
+}
+
+.container-menu header button svg {
+  background-color: #fdc500;
+}
+
+.container-menu header button:hover {
+  border-color: #999;
+}
+
+.container-menu header .botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; 
+  width: 200px;
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.container-menu h1 {
+  margin-top: 60px;
+  margin-bottom: 24px;
+  color: #fdc500;
+}
+
+.container-menu ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  list-style: none;
+}
+
+.container-menu ul li {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.container-menu ul li button svg {
+  position: absolute;
+  background-color: #fff;
+  right: 24px;
+  top: 24px;
+  border: 5px;
+  transition: 0.2s;
+}
+
+.container-menu ul li button:hover {
+  opacity: 0.8;
+}
+
+.container-menu ul li strong {
+  display: block;
+  margin-bottom: 16px;
+  color: #41414d;
+  background-color: white;
+}
+
+.container-menu ul li p + strong {
+  margin-top: 32px;
+  background-color: white;
+}
+
+.container-menu ul li p {
+  background-color: white;
+  color: black;
+  line-height: 21px;
+  font-size: 16px;
+}
