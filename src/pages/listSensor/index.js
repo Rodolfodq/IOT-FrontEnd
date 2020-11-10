@@ -32,6 +32,20 @@ export default function ListSensor() {
 
   function handleGetSensorId(id) {
     localStorage.setItem("sensorId", id);
+    handleDeleteSensor(id);
+  }
+
+  async function handleDeleteSensor(sensorId) {
+    try {
+      api.delete(`sensor/${sensorId}`, {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+      });
+      setSensors(sensors.filter((sensors) => sensors.sensorId !== sensorId));
+    } catch (error) {
+      alert("Erro ao deletar sensor. Tente novamente.");
+    }
   }
 
   return (

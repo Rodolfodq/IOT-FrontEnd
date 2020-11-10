@@ -29,6 +29,19 @@ export default function MainMenu() {
     history.push("/");
   }
 
+  async function handleDeleteDeviceId(deviceId) {
+    try {
+      api.delete(`devices/${deviceId}`, {
+        headers: {
+          Authorization: `Bearer ${jwtToken}`,
+        },
+      });
+      setDevices(devices.filter((devices) => devices.deviceId !== deviceId));
+    } catch (error) {
+      alert("Erro ao deletar device. Tente novamente.");
+    }
+  }
+
   function handleGetDeviceId(id) {
     localStorage.setItem("deviceId", id);
   }
@@ -64,7 +77,12 @@ export default function MainMenu() {
             <strong>Localização:</strong>
             <p>{device.deviceLocation}</p>
 
-            <button className="button">Remover Device</button>
+            <button
+              className="button"
+              onClick={() => handleDeleteDeviceId(device.deviceId)}
+            >
+              Remover Device
+            </button>
 
             <Link to="/newSensor">
               <button
