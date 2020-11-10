@@ -22,8 +22,7 @@ export default function Logon() {
       email,
       password,
       confirmPassword,
-    };    
-    
+    };
 
     try {
       const response = await api.post("authorize/login", data);
@@ -31,7 +30,6 @@ export default function Logon() {
       localStorage.setItem("jwt", token);
       localStorage.setItem("email", email);
       history.push("/main");
-      
     } catch (error) {
       alert("Falha na autenticação, tente novamente.");
     }
@@ -57,9 +55,6 @@ export default function Logon() {
           />
           <button className="button" type="submit">
             Entrar
-          </button>
-          <button className="button" type="reset">
-            Limpar
           </button>
           <Link to="/register">
             <button className="button" type="submit">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { FiPower } from "react-icons/fi";
 
 import imgLogo from "../../assets/lamp.png";
 
@@ -12,8 +11,8 @@ export default function ListSensor() {
   const email = localStorage.getItem("email");
   const jwtToken = localStorage.getItem("jwt");
   const deviceId = localStorage.getItem("deviceId");
-  const history = useHistory();  
-  
+  const history = useHistory();
+
   useEffect(() => {
     api
       .get(`sensor/deviceidsensor/${deviceId}`, {
@@ -38,16 +37,21 @@ export default function ListSensor() {
   return (
     <div className="container-listSensor">
       <header>
-        <img src={imgLogo} alt="Logo" />
+        <Link to="/main">
+          <img src={imgLogo} alt="Logo" />
+        </Link>
         <span>Olá, {email}.</span>
         <div className="botoes">
           <button type="button" onClick={handleLogout}>
-            <FiPower size={18} color="black" />
+            Logout
           </button>
         </div>
       </header>
 
       <h1>Sensores Cadastrados</h1>
+      <Link to="/newSensor">
+        <button className="button-menu">Adicionar Sensor</button>
+      </Link>
       <ul>
         {sensors.map((sensor) => (
           <li key={sensor.sensorId}>

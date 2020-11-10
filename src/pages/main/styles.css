@@ -31,9 +31,9 @@
 
 .container-menu header button {
   height: 42px;
-  width: 42px;
+  width: 100px;
   background: #fdc500;
-  transition: 0.2s;  
+  transition: 0.2s;
 }
 
 .container-menu header button svg {
@@ -47,7 +47,7 @@
 .container-menu header .botoes {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   width: 200px;
   margin-left: auto;
   margin-top: 0;
@@ -55,7 +55,7 @@
 
 .container-menu h1 {
   margin-top: 60px;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   color: #fdc500;
 }
 
@@ -90,4 +90,16 @@
   color: black;
   line-height: 21px;
   font-size: 16px;
+}
+
+.container-menu a .button-menu {
+  margin-bottom: 15px;
+  height: 42px;
+  width: 265px;
+  background: #fdc500;
+  transition: 0.2s;
+}
+
+.container-menu a .button-menu:hover{
+  filter: brightness(90%);
 }

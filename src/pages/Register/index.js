@@ -7,7 +7,7 @@ import imgLogo from "../../assets/lamp.png";
 
 import "./styles.css";
 
-export default function Register() {  
+export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -43,7 +43,7 @@ export default function Register() {
       <section className="form">
         <img src={imgLogo} alt="Registrar" />
         <h1>Registre-se</h1>
-        <form onSubmit={handleRegister}>          
+        <form onSubmit={handleRegister}>
           <input
             type="email"
             placeholder="E-mail"
@@ -68,9 +68,6 @@ export default function Register() {
           />
           <button className="button" type="submit">
             Registrar
-          </button>
-          <button className="button" type="reset">
-            Limpar
           </button>
           <Link to="/">
             <button className="button" type="reset">

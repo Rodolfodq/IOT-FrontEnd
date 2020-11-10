@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { FiPower } from "react-icons/fi";
 
 import imgLogo from "../../assets/lamp.png";
 
@@ -12,7 +11,6 @@ export default function MainMenu() {
   const email = localStorage.getItem("email");
   const jwtToken = localStorage.getItem("jwt");
   const history = useHistory();
-  
 
   useEffect(() => {
     api
@@ -31,7 +29,7 @@ export default function MainMenu() {
     history.push("/");
   }
 
-  function handleGetDeviceId(id){
+  function handleGetDeviceId(id) {
     localStorage.setItem("deviceId", id);
   }
 
@@ -41,18 +39,16 @@ export default function MainMenu() {
         <img src={imgLogo} alt="Logo" />
         <span>Olá, {email}.</span>
         <div className="botoes">
-          <Link to="/newDevice">
-            <button type="button" className="card-button">
-              Cadastrar novo Device
-            </button>
-          </Link>
           <button type="button" onClick={handleLogout}>
-            <FiPower size={18} color="black" />
+            Logout
           </button>
         </div>
       </header>
 
       <h1>Devices Cadastrados</h1>
+      <Link to="/newDevice">
+        <button className="button-menu">Adicionar Device</button>
+      </Link>
       <ul>
         {devices.map((device) => (
           <li key={device.deviceId}>
@@ -69,12 +65,22 @@ export default function MainMenu() {
             <p>{device.deviceLocation}</p>
 
             <button className="button">Remover Device</button>
-            
+
             <Link to="/newSensor">
-              <button className="button" onClick={() => handleGetDeviceId(device.deviceId)}>Adicionar Sensor</button>
+              <button
+                className="button"
+                onClick={() => handleGetDeviceId(device.deviceId)}
+              >
+                Adicionar Sensor
+              </button>
             </Link>
             <Link to="/listSensor">
-              <button className="button" onClick={() => handleGetDeviceId(device.deviceId)}>Lista de Sensores</button>
+              <button
+                className="button"
+                onClick={() => handleGetDeviceId(device.deviceId)}
+              >
+                Lista de Sensores
+              </button>
             </Link>
           </li>
         ))}

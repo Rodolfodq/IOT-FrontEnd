@@ -73,10 +73,7 @@ export default function NewDevice() {
 
           <button className="button" type="submit">
             Confirmar
-          </button>
-          <button className="button" type="reset">
-            Limpar
-          </button>
+          </button>          
           <Link to="/main">
             <button className="button" type="reset">
               Cancelar

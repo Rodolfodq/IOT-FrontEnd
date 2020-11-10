@@ -1,94 +1,105 @@
 .container-listSensor {
-    width: 100%;
-    max-width: 1180px;
-    padding: 0 30px;
-    margin: 32px auto;
-  }
-  
-  .container-listSensor header {
-    display: flex;
-    align-items: center;
-  }
-  
-  .container-listSensor header span {
-    font-size: 20px;
-    margin-left: 24px;
-    color: white;
-  }
-  
-  .container-listSensor header img {
-    height: 90px;
-  }
-  
-  .container-listSensor header .card-button {
-    width: 200px;
-    height: 42px;
-    margin-top: 0;
-    background-color: #fdc500;
-    align-items: stretch;
-    color: black;
-  }
-  
-  .container-listSensor header button {
-    height: 42px;
-    width: 42px;
-    background: #fdc500;
-    transition: 0.2s;  
-  }
-  
-  .container-listSensor header button svg {
-    background-color: #fdc500;
-  }
-  
-  .container-listSensor header button:hover {
-    border-color: #999;
-  }
-  
-  .container-listSensor header .botoes {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end; 
-    width: 200px;
-    margin-left: auto;
-    margin-top: 0;
-  }
-  
-  .container-listSensor h1 {
-    margin-top: 60px;
-    margin-bottom: 24px;
-    color: #fdc500;
-  }
-  
-  .container-listSensor ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 24px;
-    list-style: none;
-  }
-  
-  .container-listSensor ul li {
-    background: white;
-    padding: 24px;
-    border-radius: 8px;
-    position: relative;
-  }
-  
-  .container-listSensor ul li strong {
-    display: block;
-    margin-bottom: 16px;
-    color: #41414d;
-    background-color: white;
-  }
-  
-  .container-listSensor ul li p + strong {
-    margin-top: 32px;
-    background-color: white;
-  }
-  
-  .container-listSensor ul li p {
-    background-color: white;
-    color: black;
-    line-height: 21px;
-    font-size: 16px;
-  }
-  
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 32px auto;
+}
+
+.container-listSensor header {
+  display: flex;
+  align-items: center;
+}
+
+.container-listSensor header span {
+  font-size: 20px;
+  margin-left: 24px;
+  color: white;
+}
+
+.container-listSensor header img {
+  height: 90px;
+}
+
+.container-listSensor header .card-button {
+  width: 200px;
+  height: 42px;
+  margin-top: 0;
+  background-color: #fdc500;
+  align-items: stretch;
+  color: black;
+}
+
+.container-listSensor header button {
+  height: 42px;
+  width: 100px;
+  background: #fdc500;
+  transition: 0.2s;
+}
+
+.container-listSensor header button svg {
+  background-color: #fdc500;
+}
+
+.container-listSensor header button:hover {
+  border-color: #999;
+}
+
+.container-listSensor header .botoes {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 200px;
+  margin-left: auto;
+  margin-top: 0;
+}
+
+.container-listSensor h1 {
+  margin-top: 60px;
+  margin-bottom: 10px;
+  color: #fdc500;
+}
+
+.container-listSensor ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px;
+  list-style: none;
+}
+
+.container-listSensor ul li {
+  background: white;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.container-listSensor ul li strong {
+  display: block;
+  margin-bottom: 16px;
+  color: #41414d;
+  background-color: white;
+}
+
+.container-listSensor ul li p + strong {
+  margin-top: 32px;
+  background-color: white;
+}
+
+.container-listSensor ul li p {
+  background-color: white;
+  color: black;
+  line-height: 21px;
+  font-size: 16px;
+}
+
+.container-listSensor a .button-menu {
+  margin-bottom: 15px;
+  height: 42px;
+  width: 285px;
+  background: #fdc500;
+  transition: 0.2s;
+}
+
+.container-listSensor a .button-menu:hover{
+  filter: brightness(90%);
+} 

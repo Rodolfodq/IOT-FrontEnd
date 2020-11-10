@@ -37,7 +37,7 @@ export default function NewSensor() {
       alert(
         `Sensor inserido com sucesso. Sensor Token: ${sensorToken}. Sensor ID: ${sensorId}`
       );
-      history.push("/main");
+      history.push("/listSensor");
     } catch (error) {
       alert("Erro ao inserir o sensor. Favor tentar novamente.");
     }
@@ -70,9 +70,6 @@ export default function NewSensor() {
 
           <button className="button" type="submit">
             Confirmar
-          </button>
-          <button className="button" type="reset">
-            Limpar
           </button>
           <Link to="main">
             <button className="button" type="reset">
