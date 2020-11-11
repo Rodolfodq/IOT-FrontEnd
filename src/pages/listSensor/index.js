@@ -48,6 +48,12 @@ export default function ListSensor() {
     }
   }
 
+  function handleAlterSensor(sensorId, sensorToken){
+    localStorage.setItem("sensorId", sensorId);
+    localStorage.setItem("sensorToken", sensorToken);
+    history.push("/alterSensor");
+  }
+
   return (
     <div className="container-listSensor">
       <header>
@@ -62,7 +68,7 @@ export default function ListSensor() {
         </div>
       </header>
 
-      <h1>Sensores Cadastrados</h1>
+  <h1>Sensores Cadastrados: {sensors.length}</h1>
       <Link to="/newSensor">
         <button className="button-menu">Adicionar Sensor</button>
       </Link>
@@ -80,6 +86,13 @@ export default function ListSensor() {
 
             <strong>Token Sensor:</strong>
             <p>{sensor.sensorToken}</p>
+
+            <button
+              className="button"
+              onClick={() => handleAlterSensor(sensor.sensorId, sensor.sensorToken)}
+            >
+              Alterar Sensor
+            </button>
 
             <button
               className="button"

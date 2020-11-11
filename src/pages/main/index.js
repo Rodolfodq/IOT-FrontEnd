@@ -46,6 +46,11 @@ export default function MainMenu() {
     localStorage.setItem("deviceId", id);
   }
 
+  function handleAlterDeviceId(id){
+    localStorage.setItem("deviceId", id);
+    history.push("/alterDevice");
+  }
+
   return (
     <div className="container-menu">
       <header>
@@ -58,7 +63,7 @@ export default function MainMenu() {
         </div>
       </header>
 
-      <h1>Devices Cadastrados</h1>
+      <h1>Devices Cadastrados: {devices.length}</h1>
       <Link to="/newDevice">
         <button className="button-menu">Adicionar Device</button>
       </Link>
@@ -77,6 +82,13 @@ export default function MainMenu() {
             <strong>Localização:</strong>
             <p>{device.deviceLocation}</p>
 
+            
+            <button
+              className="button"
+              onClick={() => handleAlterDeviceId(device.deviceId)}
+            >
+              Alterar Device
+            </button>
             <button
               className="button"
               onClick={() => handleDeleteDeviceId(device.deviceId)}

@@ -6,17 +6,18 @@ import api from "../../services/api";
 
 import "./styles.css";
 
-export default function NewDevice() {
+export default function AlterDevice() {
   const [deviceName, setDeviceName] = useState("");
   const [deviceModel, setDeviceModel] = useState("");
   const [deviceMacId, setDeviceMacId] = useState("");
   const [deviceLocation, setDeviceLocation] = useState("");
 
   const jwtToken = localStorage.getItem("jwt");
+  const deviceId = localStorage.getItem("deviceId");
 
   const history = useHistory();
 
-  async function handleNewDevice(e) {
+  async function handleAlterDevice(e) {
     e.preventDefault();
 
     const data = {
@@ -27,26 +28,25 @@ export default function NewDevice() {
     };
 
     try {
-      const response = await api.post("devices", data, {
+      await api.put(`devices/${deviceId}`, data, {
         headers: {
           Authorization: `Bearer ${jwtToken}`,
         },
       });
-      const deviceId = response.data.deviceId;
-      alert(`Device inserido com sucesso. ID: ${deviceId}`);
+
+      alert(`Device alterado com sucesso. ID: ${deviceId}`);
       history.push("/main");
     } catch (error) {
-      alert("Erro ao inserir o device. Favor tentar novamente.");
+      alert("Erro ao alterar o device. Favor tentar novamente.");
     }
   }
 
   return (
     <div className="container-device">
-      
       <section className="form">
         <img src={imgLogo} alt="NewDevice" />
-        <h1>Novo Device</h1>
-        <form onSubmit={handleNewDevice}>
+        <h1>Alterar Device ID: {deviceId}</h1>
+        <form onSubmit={handleAlterDevice}>
           <input
             type="text"
             placeholder="Nome"
@@ -74,7 +74,7 @@ export default function NewDevice() {
 
           <button className="button" type="submit">
             Confirmar
-          </button>          
+          </button>
           <Link to="/main">
             <button className="button" type="reset">
               Cancelar

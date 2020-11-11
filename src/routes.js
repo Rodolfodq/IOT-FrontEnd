@@ -7,6 +7,8 @@ import NewDevice from "./pages/newDevice";
 import NewSensor from "./pages/newSensor";
 import MainMenu from "./pages/main";
 import ListSensor from "./pages/listSensor";
+import AlterDevice from "./pages/alterDevice";
+import AlterSensor from "./pages/alterSensor";
 
 export default function Routes() {
   return (
@@ -18,6 +20,8 @@ export default function Routes() {
         <Route path="/newSensor" exact component={NewSensor} />
         <Route path="/main" component={MainMenu} />
         <Route path="/listSensor" component={ListSensor} />
+        <Route path="/alterDevice" exact component={AlterDevice} />
+        <Route path="/alterSensor" exact component={AlterSensor} />
       </Switch>
     </BrowserRouter>
   );
