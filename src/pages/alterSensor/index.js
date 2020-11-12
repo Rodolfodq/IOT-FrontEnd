@@ -26,7 +26,7 @@ export default function AlterSensor() {
       sensorModel,
       sensorFunction,
       deviceId,
-      sensorToken
+      sensorToken,
     };
 
     try {
@@ -39,7 +39,7 @@ export default function AlterSensor() {
       alert(`Sensor alterado com sucesso.`);
       history.push("/listSensor");
     } catch (error) {
-      alert("Erro ao alterar o sensor. Favor tentar novamente.");
+      alert("Erro ao alterar o sensor. Favor tente novamente.");
     }
   }
 
@@ -71,7 +71,7 @@ export default function AlterSensor() {
           <button className="button" type="submit">
             Confirmar
           </button>
-          <Link to="main">
+          <Link to="/listSensor">
             <button className="button" type="reset">
               Cancelar
             </button>

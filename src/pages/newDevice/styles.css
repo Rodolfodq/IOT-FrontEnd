@@ -25,9 +25,9 @@
     
   }
   
-  .container-device .form img {
-    height: 150px;
-    width: 150px;
+  .container-device section.form img {
+    height: 90px;
+    width: 90px;
   }
   
   .container-device .form input {

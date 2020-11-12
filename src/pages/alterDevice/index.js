@@ -37,7 +37,7 @@ export default function AlterDevice() {
       alert(`Device alterado com sucesso. ID: ${deviceId}`);
       history.push("/main");
     } catch (error) {
-      alert("Erro ao alterar o device. Favor tentar novamente.");
+      alert("Erro ao alterar o device. Favor tente novamente.");
     }
   }
 
